@@ -16,6 +16,9 @@
 <body class="container">
     <!-- Encabezado con logo y título del sitio -->
     <header>
+        <div class="reloj" id="reloj">
+
+        </div>
         <div class="titulo">
             <img src="assets/img/logo.jpg" alt="Logo El Faro" class="logo">
             <h1>El Faro</h1>
@@ -33,258 +36,282 @@
                 <li>
                     <a href="#negocios">Negocios</a>
                 </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="mensajes.html">Mensajes</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <!-- Sección principal con noticias generales y multimedia -->
-    <section id="noticiasGenerales">
-        <!-- Título de la sección de noticias generales -->
-        <h1>Noticias Generales</h1>
-        <!-- Cada noticia se presenta como un artículo con título y párrafo descriptivo -->
-        <div class="grid-noticias">
-            <article class="noticia">
-                <h2>Gobernadores acuerdan fórmula con Ejecutivo para subsidiar al transporte público en regiones - Social</h2>
-                <p>
-                    El gobernador de Los Lagos y presidente de la Asociación de Gobernadores Regionales de Chile (Agorechi),
-                    Alejandro Santana, informó que se acordó que el Ministerio de Transportes y Telecomunicaciones se haga cargo
-                    de la administración y financiamiento del subsidio del transporte público en regiones.
-                </p>
-            </article>
-        
-            <article class="noticia">
-                <h2>Dólar sube y supera los $920 impulsado por creciente incertidumbre en Medio Oriente - Economía</h2>
-                <p>
-                    El dólar inicia la jornada de este jueves con un alza de $5,7 en el mercado cambiario local, en un escenario
-                    marcado por el fortalecimiento global del billete verde y un entorno internacional aún dominado por la
-                    incertidumbre geopolítica por la guerra en Medio Oriente.
-                </p>
-            </article>
-        
-            <article class="noticia">
-                <h2>Primer paso de un juicio histórico: Maduro comparece ante tribunal de Nueva York 82 días después de su
-                    arresto - Internacional</h2>
-                <p>
-                    El depuesto líder venezolano Nicolás Maduro y su esposa, Cilia Flores, regresan este jueves a la Corte del
-                    Distrito Sur de Nueva York para su segunda audiencia tras su captura en enero, un proceso marcado por la
-                    denuncia de la defensa de un "bloqueo ilegal" de sus fondos para pagar abogados.
-                </p>
-            </article>
-        
+    <main>
+        <!-- Contador total -->
+        <div class="contador-total">
+            <h2>Total de artículos en el sitio: <span id="count-total">0</span></h2>
         </div>
-        <!--  Sección de multimedia con video y audio -->
-        <div id="multimedia">
-            <!-- Título de la sección de multimedia -->
-            <h1>Multimedia</h1>
-            <div class="contenedor">
-                <div id="video">
-                    <iframe width="600" height="350" src="https://www.youtube.com/embed/tEwLE3WmraA" title="Video de noticia"
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div id="audio">
-                    <audio controls controls autoplay>
-                        <source src="assets/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
-                    </audio>
-                
+
+        <!-- Sección principal con noticias generales y multimedia -->
+        <section id="noticiasGenerales">
+            <!-- Título de la sección de noticias generales -->
+            <h1>Noticias Generales (<span id="count-generales">0</span>)</h1>
+            <!-- Cada noticia se presenta como un artículo con título y párrafo descriptivo -->
+            <div id="grid-generales" name="grid-generales" class="grid-noticias">
+                <article class="noticia">
+                    <h2>Gobernadores acuerdan fórmula con Ejecutivo para subsidiar al transporte público en regiones - Social
+                    </h2>
+                    <p>
+                        El gobernador de Los Lagos y presidente de la Asociación de Gobernadores Regionales de Chile (Agorechi),
+                        Alejandro Santana, informó que se acordó que el Ministerio de Transportes y Telecomunicaciones se haga
+                        cargo
+                        de la administración y financiamiento del subsidio del transporte público en regiones.
+                    </p>
+                </article>
+        
+                <article class="noticia">
+                    <h2>Dólar sube y supera los $920 impulsado por creciente incertidumbre en Medio Oriente - Economía</h2>
+                    <p>
+                        El dólar inicia la jornada de este jueves con un alza de $5,7 en el mercado cambiario local, en un
+                        escenario
+                        marcado por el fortalecimiento global del billete verde y un entorno internacional aún dominado por la
+                        incertidumbre geopolítica por la guerra en Medio Oriente.
+                    </p>
+                </article>
+        
+                <article class="noticia">
+                    <h2>Primer paso de un juicio histórico: Maduro comparece ante tribunal de Nueva York 82 días después de su
+                        arresto - Internacional</h2>
+                    <p>
+                        El depuesto líder venezolano Nicolás Maduro y su esposa, Cilia Flores, regresan este jueves a la Corte
+                        del
+                        Distrito Sur de Nueva York para su segunda audiencia tras su captura en enero, un proceso marcado por la
+                        denuncia de la defensa de un "bloqueo ilegal" de sus fondos para pagar abogados.
+                    </p>
+                </article>
+            </div>
+            <button id="btnNoticiasGenerales" type="button" class="btn-noticias">+</button>
+            <!--  Sección de multimedia con video y audio -->
+            <div id="multimedia">
+                <!-- Título de la sección de multimedia -->
+                <h1>Multimedia</h1>
+                <div class="contenedor">
+                    <div id="video">
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/tEwLE3WmraA"
+                            title="Video de noticia" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div id="audio">
+                        <audio controls controls autoplay>
+                            <source src="assets/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
+                        </audio>
+        
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Sección de deportes con formato de cuadrícula para noticias deportivas -->
-    <section id="deportes">
-        <!-- Título de la sección de deportes -->
-        <h1>Seccion Deportes</h1>
-        <div class="grid-noticias">
-            <article class="noticia">
-                <h2>
-                    Everton denuncia a Universidad Católica
-                    y arriesga millonaria sanción - Futbol
-                </h2>
-                <p>
-                    Los "ruleteros" presentaron antecedentes ante el
-                    Tribunal de Disciplina respecto de su visita al Claro Arena.
-                    Han pasado 12 días desde el sufrido empate (2-2)
-                    que rescató Universidad Católica ante
-                    Everton en el Claro Arena por la fecha 7 del
-                    Campeonato Nacional y el duelo continúa dando de
-                    qué hablar, aunque no por motivos futbolísticos. Y
-                    es que ahora los clubes se enfrentan en los
-                    escritorios del Tribunal de Disciplina
-                    Esta determinación causó molestia en
-                    Everton, que decidió denunciar a los cruzados amparados en
-                    el artículo 64 de las Bases del Campeonato , el
-                    cual establece un mínimo de aforo para el club
-                    visitante en partidos calificados en categoría B, C o D.
-                </p>
-            </article>
+        </section>
+        <!-- Sección de deportes con formato de cuadrícula para noticias deportivas -->
+        <section id="deportes">
+            <!-- Título de la sección de deportes -->
+            <h1>Seccion Deportes (<span id="count-deportes">0</span>)</h1>
+            <div id="grid-deportes" class="grid-noticias">
+                <article class="noticia">
+                    <h2>
+                        Everton denuncia a Universidad Católica
+                        y arriesga millonaria sanción - Futbol
+                    </h2>
+                    <p>
+                        Los "ruleteros" presentaron antecedentes ante el
+                        Tribunal de Disciplina respecto de su visita al Claro Arena.
+                        Han pasado 12 días desde el sufrido empate (2-2)
+                        que rescató Universidad Católica ante
+                        Everton en el Claro Arena por la fecha 7 del
+                        Campeonato Nacional y el duelo continúa dando de
+                        qué hablar, aunque no por motivos futbolísticos. Y
+                        es que ahora los clubes se enfrentan en los
+                        escritorios del Tribunal de Disciplina
+                        Esta determinación causó molestia en
+                        Everton, que decidió denunciar a los cruzados amparados en
+                        el artículo 64 de las Bases del Campeonato , el
+                        cual establece un mínimo de aforo para el club
+                        visitante en partidos calificados en categoría B, C o D.
+                    </p>
+                </article>
         
-            <article class="noticia">
-                <h2>
-                    El COI prohíbe a las mujeres transgénero
-                    competir en categorías femeninas - Olimpico
-                <p>
-                    Mediante un comunicado, establecieron que la
-                    elegibilidad "está limitada a mujeres biológicas, lo
-                    cual se determina sobre la base de una prueba
-                    única del gen SRY“
-                    El Comité Olímpico Internacional (COI) anunció
-                    una nueva política sobre la protección de la
-                    categoría femenina en el deporte olímpico que se
-                    aplicará a partir de los Juegos Olímpicos de Los
-                    Ángeles 2028 y que no tendrá carácter retroactivo,
-                    y que prohibirá a las mujeres transgénero
-                    competir en categorías femeninas.
-                    Según indicó el COI en un comunicado, ahora la
-                    elegibilidad para cualquier evento de categoría
-                    femenina en los Juegos Olímpicos o cualquier otro
-                    evento que auspicie, incluidos los deportes
-                    individuales y de equipo, equipo,"está limitada a mujeres
-                    biológicas, lo cual se determina sobre la base
-                    de una prueba única del gen SRY" y detectar su
-                    "ausencia o
-                    "Esta política, fundamentada en pruebas y con el
-                    respaldo de expertos, y aplicable a partir de los
-                    Juegos Olímpicos de Los Ángeles 2028, protege la
-                    equidad, la seguridad y la integridad en la categoría
-                    femenina. No tiene carácter retroactivo y no se
-                    aplica a ningún programa deportivo de base o
-                    recreativo", apuntó el comité.
-                </p>
-            </article>
+                <article class="noticia">
+                    <h2>
+                        El COI prohíbe a las mujeres transgénero
+                        competir en categorías femeninas - Olimpico
+                        <p>
+                            Mediante un comunicado, establecieron que la
+                            elegibilidad "está limitada a mujeres biológicas, lo
+                            cual se determina sobre la base de una prueba
+                            única del gen SRY“
+                            El Comité Olímpico Internacional (COI) anunció
+                            una nueva política sobre la protección de la
+                            categoría femenina en el deporte olímpico que se
+                            aplicará a partir de los Juegos Olímpicos de Los
+                            Ángeles 2028 y que no tendrá carácter retroactivo,
+                            y que prohibirá a las mujeres transgénero
+                            competir en categorías femeninas.
+                            Según indicó el COI en un comunicado, ahora la
+                            elegibilidad para cualquier evento de categoría
+                            femenina en los Juegos Olímpicos o cualquier otro
+                            evento que auspicie, incluidos los deportes
+                            individuales y de equipo, equipo,"está limitada a mujeres
+                            biológicas, lo cual se determina sobre la base
+                            de una prueba única del gen SRY" y detectar su
+                            "ausencia o
+                            "Esta política, fundamentada en pruebas y con el
+                            respaldo de expertos, y aplicable a partir de los
+                            Juegos Olímpicos de Los Ángeles 2028, protege la
+                            equidad, la seguridad y la integridad en la categoría
+                            femenina. No tiene carácter retroactivo y no se
+                            aplica a ningún programa deportivo de base o
+                            recreativo", apuntó el comité.
+                        </p>
+                </article>
         
-            <article class="noticia">
-                <h2>
-                    Bolivia vs Surinam: Hora y canal CONFIRMADO para ver el repechaje del
-                    Mundial 2026 - Futbol
-                </h2>
-                <p>
-                    La selección altiplánica buscará alcanzar uno de
-                    los últimos cupos para disputar el torneo. Revisa
-                    aquí todos los detalles de la programación.
-                    Argentina, Brasil, Colombia, Ecuador, Paraguay y
-                    Uruguay consiguieron el pasaje rumbo a la
-                    próxima Copa Mundial de la FIFA a través de las
-                    eliminatorias de CONMEBOL. Bolivia , por su
-                    parte, competirá en el torneo clasificatorio que se
-                    disputará desde el 26 hasta el 31 de marzo tras
-                    obtener la séptima posición.
-                    De los playoffs, además, participarán dos
-                    selecciones de la Confederación de Norteamérica,
-                    Centroamérica y el Caribe de Fútbol (CONCACAF)
-                    Jamaica y Surinam uno de la Confederación
-                    Asiática de Fútbol (AFC) Irak y otro de la
-                    Confederación de Fútbol de Oceanía (OFC)
-                    Nueva Caledonia.
-                    Las cuatro selecciones con menor ranking en
-                    las eliminatorias del Mundial (Bolivia, Surinam,
-                    Nueva Caledonia y Jamaica) se enfrentarán en
-                    una instancia de semifinales que se definieron
-                    por sorteo. Por su parte, los equipos mejor
-                    posicionados en la tabla (República Democrática
-                    del Congo e Irak) son cabeza de serie y accedieron
-                    directamente a la final.
-                </p>
-            </article>
-    </section>
-    <section id="negocios">
-        <!-- Título de la sección de negocios -->
-        <h1>Seccion Negocios</h1>
+                <article class="noticia">
+                    <h2>
+                        Bolivia vs Surinam: Hora y canal CONFIRMADO para ver el repechaje del
+                        Mundial 2026 - Futbol
+                    </h2>
+                    <p>
+                        La selección altiplánica buscará alcanzar uno de
+                        los últimos cupos para disputar el torneo. Revisa
+                        aquí todos los detalles de la programación.
+                        Argentina, Brasil, Colombia, Ecuador, Paraguay y
+                        Uruguay consiguieron el pasaje rumbo a la
+                        próxima Copa Mundial de la FIFA a través de las
+                        eliminatorias de CONMEBOL. Bolivia , por su
+                        parte, competirá en el torneo clasificatorio que se
+                        disputará desde el 26 hasta el 31 de marzo tras
+                        obtener la séptima posición.
+                        De los playoffs, además, participarán dos
+                        selecciones de la Confederación de Norteamérica,
+                        Centroamérica y el Caribe de Fútbol (CONCACAF)
+                        Jamaica y Surinam uno de la Confederación
+                        Asiática de Fútbol (AFC) Irak y otro de la
+                        Confederación de Fútbol de Oceanía (OFC)
+                        Nueva Caledonia.
+                        Las cuatro selecciones con menor ranking en
+                        las eliminatorias del Mundial (Bolivia, Surinam,
+                        Nueva Caledonia y Jamaica) se enfrentarán en
+                        una instancia de semifinales que se definieron
+                        por sorteo. Por su parte, los equipos mejor
+                        posicionados en la tabla (República Democrática
+                        del Congo e Irak) son cabeza de serie y accedieron
+                        directamente a la final.
+                    </p>
+                </article>
+            </div>
+            <button id="btnNoticiasDeportes" type="button" class="btn-noticias">+</button>
+        </section>
+        <section id="negocios">
+            <!-- Título de la sección de negocios -->
+            <h1>Seccion Negocios (<span id="count-negocios">0</span>)
+</h1>
+        
+            <div id="grid-negocios" class="grid-noticias">
+                <article class="noticia">
+                    <h2>
+                        Feria libre y comercio de barrio: Lo
+                        Valledor aclara impacto en precio de
+                        frutas y verduras - Economía
+                    </h2>
+                    <p>
+                        Gonzalo Bravo, Administrador General del recinto,
+                        explicó que para el comercio pequeño, "puede que
+                        ese sobreprecio que tenga por el alza en los fletes
+                        o en el transporte personal se traspase a ese
+                        producto“.
+                        Luego del anuncio del
+                        Gobierno del incremento en
+                        el precio de las bencinas, creció la preocupación
+                        ante un eventual alza en la canasta básica . Ante
+                        esto, el Mercado Mayorista Lo Valledor llamó a la
+                        calma, explicando la dinámica de costos que rige al
+                        principal centro de abastecimiento del país.
+                        No obstante, Bravo reconoció que el escenario es
+                        distinto para quienes operan con estructuras
+                        logísticas más reducidas. “ Si bien podría verse
+                        más afectado los pequeños que traen menor
+                        volumen o no tienen el volumen para llegar al
+                        mercado , puede que ese sobreprecio que tenga
+                        por el alza en los fletes o en el transporte personal
+                        se traspase a ese producto”, señaló.
+                    </p>
+                </article>
+        
+                <article class="noticia">
+                    <h2>
+                        Reconocida empresa chilena rematará
+                        más de 500 mil alimentos en conserva - Economía
+                    </h2>
+                    <p>
+                        Se trata de la histórica empresa chilena, Centauro,
+                        que fue declarada en quiebra en febrero del 2026.
+                        Remates del Río
+                        anunció que más de 500.000
+                        alimentos en conserva serán liquidados.
+                        Se trata de la histórica empresa chilena de
+                        conservas, Centauro S.A, la cual ya había sido
+                        declarada en quiebra en febrero de este año.
+                        En concreto, la firma, que cuenta con 108 años de
+                        vida y tradición, adeuda en torno a $2.300 millones
+                        a sus acreedores, dejando en jaque el camino para
+                        sus 110 trabajadores.
+                        En tanto, la empresa de
+                        remates online anunció
+                        que la liquidación de los alimentos conserveros se
+                        realizará el próximo 27 de marzo a las 11:00 horas
+                        a través del sitio web
+                        <a href="https://www.rematesdelrio.cl" target="_blank">www.rematesdelrio.cl</a>
+                        Para participar, hay que inscribirse en un link
+                        habilitado en la página para dicho remate, ya que la
+                        modalidad será 100% online.
+                    </p>
+                </article>
+        
+                <article class="noticia">
+                    <h2>
+                        Gastos comunes al alza en la RM: las
+                        comunas donde más subieron y en
+                        cuáles se paga más - Economía
+                    </h2>
+                    <p>
+                        Un estudio de
+                        Assetplan analizó 10 comunas de la
+                        región Metropolitana, revelando que entre una
+                        comuna y otra puede haber una diferencia superior
+                        a los $160.000.
+                        Un estudio de
+                        Assetplan reveló cuáles fueron las
+                        comunas que más aumentaron sus valores
+                        respecto al pago de gastos comunes , siendo
+                        Ñuñoa la zona al tope de la lista.
+                        De acuerdo a lo señalado por el sondeo, entre
+                        enero del 2025 y enero del 2026 los gastos
+                        comunes aumentaron su valor en 17% como
+                        promedio, considerando departamentos de un
+                        dormitorio y un baño.
+                        El estudio consideró información de 81 edificios
+                        ubicados en 10 comunas de la región
+                        Metropolitana, analizando principalmente
+                        tipologías de departamentos de 1 dormitorio y 2
+                        dormitorios, con el objetivo de observar la
+                        evolución del costo de operación de los edificios
+                        durante el último año.
+                    </p>
+                </article>
+            </div>
+            <button id="btnNoticiasNegocios" type="button" class="btn-noticias">+</button>
+        </section>
+    </main>
 
-        <div class="grid-noticias">
-            <article class="noticia">
-                <h2>
-                    Feria libre y comercio de barrio: Lo
-                    Valledor aclara impacto en precio de
-                    frutas y verduras - Economía
-                </h2>
-                <p>
-                    Gonzalo Bravo, Administrador General del recinto,
-                    explicó que para el comercio pequeño, "puede que
-                    ese sobreprecio que tenga por el alza en los fletes
-                    o en el transporte personal se traspase a ese
-                    producto“.
-                    Luego del anuncio del
-                    Gobierno del incremento en
-                    el precio de las bencinas, creció la preocupación
-                    ante un eventual alza en la canasta básica . Ante
-                    esto, el Mercado Mayorista Lo Valledor llamó a la
-                    calma, explicando la dinámica de costos que rige al
-                    principal centro de abastecimiento del país.
-                    No obstante, Bravo reconoció que el escenario es
-                    distinto para quienes operan con estructuras
-                    logísticas más reducidas. “ Si bien podría verse
-                    más afectado los pequeños que traen menor
-                    volumen o no tienen el volumen para llegar al
-                    mercado , puede que ese sobreprecio que tenga
-                    por el alza en los fletes o en el transporte personal
-                    se traspase a ese producto”, señaló.
-                </p>
-            </article>
-        
-            <article class="noticia">
-                <h2>
-                    Reconocida empresa chilena rematará
-                    más de 500 mil alimentos en conserva - Economía
-                </h2>
-                <p>
-                    Se trata de la histórica empresa chilena, Centauro,
-                    que fue declarada en quiebra en febrero del 2026.
-                    Remates del Río
-                    anunció que más de 500.000
-                    alimentos en conserva serán liquidados.
-                    Se trata de la histórica empresa chilena de
-                    conservas, Centauro S.A, la cual ya había sido
-                    declarada en quiebra en febrero de este año.
-                    En concreto, la firma, que cuenta con 108 años de
-                    vida y tradición, adeuda en torno a $2.300 millones
-                    a sus acreedores, dejando en jaque el camino para
-                    sus 110 trabajadores.
-                    En tanto, la empresa de
-                    remates online anunció
-                    que la liquidación de los alimentos conserveros se
-                    realizará el próximo 27 de marzo a las 11:00 horas
-                    a través del sitio web
-                    <a href="https://www.rematesdelrio.cl" target="_blank">www.rematesdelrio.cl</a>
-                    Para participar, hay que inscribirse en un link
-                    habilitado en la página para dicho remate, ya que la
-                    modalidad será 100% online.
-                </p>
-            </article>
-        
-            <article class="noticia">
-                <h2>
-                    Gastos comunes al alza en la RM: las
-                    comunas donde más subieron y en
-                    cuáles se paga más - Economía
-                </h2>
-                <p>
-                    Un estudio de
-                    Assetplan analizó 10 comunas de la
-                    región Metropolitana, revelando que entre una
-                    comuna y otra puede haber una diferencia superior
-                    a los $160.000.
-                    Un estudio de
-                    Assetplan reveló cuáles fueron las
-                    comunas que más aumentaron sus valores
-                    respecto al pago de gastos comunes , siendo
-                    Ñuñoa la zona al tope de la lista.
-                    De acuerdo a lo señalado por el sondeo, entre
-                    enero del 2025 y enero del 2026 los gastos
-                    comunes aumentaron su valor en 17% como
-                    promedio, considerando departamentos de un
-                    dormitorio y un baño.
-                    El estudio consideró información de 81 edificios
-                    ubicados en 10 comunas de la región
-                    Metropolitana, analizando principalmente
-                    tipologías de departamentos de 1 dormitorio y 2
-                    dormitorios, con el objetivo de observar la
-                    evolución del costo de operación de los edificios
-                    durante el último año.
-                </p>
-            </article>
-        </div>
-    </section>
+  
     <!-- Sección de pie de página -->
     <footer>
         <div class="footer-data">
@@ -293,6 +320,28 @@
             <p><strong>EL Faro, iluminando la noticia....</strong></p>
         </div>
     </footer>
+
+    <!-- Modal Noticias -->
+    <div id="modalNoticias" class="modal fade">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2 id="tituloM"></h2>
+            <form id="formArticulo" enctype="multipart/form-data">
+                <label for="titulo">Título del artículo</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select id="categoria" name="categoria" value="">
+                    
+                </select>
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Ingrese la descripción" rows="4"></textarea>
+            
+                <button type="submit" class="btn-guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 <script src="assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

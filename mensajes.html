@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>El Faro</title>
+</head>
+
+<body class="container">
+    <!-- Encabezado con logo y título del sitio -->
+    <header>
+        <div class="reloj" id="reloj">
+
+        </div>
+        <div class="titulo">
+            <img src="assets/img/logo.jpg" alt="Logo El Faro" class="logo">
+            <h1>El Faro</h1>
+        </div>
+        <!-- Menu de navegación -->
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul id="menu">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="index.html#deportes">Deportes</a>
+                </li>
+                <li>
+                    <a href="index.html#negocios">Negocios</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="mensajes.html">Mensajes</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="accordion">
+            <div class="accordion-item active">
+                <button class="accordion-header">Formulario de Mensajes</button>
+                <div class="accordion-body">
+                    <section class="mensajes">
+                        <h2>Mensajes Recibidos</h2>
+                        <div id="tableContenedor" class="tabla-contenedor">
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección de pie de página -->
+    <footer>
+        <div class="footer-data">
+            <h3>Email: elfaro@info.com</h3>
+            <h3>Teléfono: 9561436852</h3>
+            <p><strong>EL Faro, iluminando la noticia....</strong></p>
+        </div>
+    </footer>
+
+    <!-- Modal Mensaje -->
+    <div id="modalMensaje" class="modal fade">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Detalle del Mensaje</h2>
+            <p><strong>Nombre:</strong> <span id="Nombre"></span></p>
+            <p><strong>Mensaje:</strong> <span id="Mensaje"></span></p>
+        </div>
+    </div>
+
+</body>
+
+<script src="assets/js/mensaje.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
