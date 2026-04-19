@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => 
 {
-    // Lógica para abrir/cerrar el accordion
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
-
-    accordionHeaders.forEach(header => {
-        header.addEventListener("click", () => 
-        {
-            const item = header.parentElement;
-            item.classList.toggle("active");
-        });
-    });
-
     //Array para almacenar mensajes de contacto
     let arrMensaje = [];
 
@@ -20,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () =>
     {
         e.preventDefault();
 
-        if(nombre.value === '' || mensaje.value === '')
+        if(nombre.value === '' || email.value === '' || mensaje.value === '')
         {
             Swal.fire({
                 icon: 'error',
@@ -34,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () =>
         arrMensaje = JSON.parse(localStorage.getItem('mensajes')) || [];
 
         // Agregar nuevo mensaje al array
-        arrMensaje.push({nombre: nombre.value, mensaje: mensaje.value});
+        arrMensaje.push({nombre: nombre.value, email: email.value, mensaje: mensaje.value});
 
         // Guardar en localStorage
         localStorage.setItem('mensajes', JSON.stringify(arrMensaje));
@@ -43,8 +32,37 @@ document.addEventListener('DOMContentLoaded', () =>
             icon: 'success',
             title: 'Mensaje enviado',
             text: `Gracias por contactarnos, ${nombre.value}. Hemos recibido tu mensaje.`
+        }).then((result) => {
+            if (result.isConfirmed) {
+                /*limpiar el formulario*/
+                formContacto.reset();
+                /*enviar a index.html*/
+                window.location.href = '../index.html';
+            }
         });
-        formContacto.reset();
+    });
+
+    //Agrego evento click a btnCancelar
+    const btnCancelar = document.querySelector('#btnCancelar');
+    btnCancelar.addEventListener('click', (e) =>
+    {
+        e.preventDefault();
+
+        Swal.fire({
+            title: '¿Estás seguro que deseas cancelar el mensaje?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, cancelar',
+            cancelButtonText: 'No, mantener'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                /*limpiar el formulario*/
+                formContacto.reset();
+                /*enviar a index.html*/
+                window.location.href = '../index.html';
+            }
+        });
     });
 });
-

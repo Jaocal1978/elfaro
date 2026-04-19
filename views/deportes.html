@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="../assets/img/logoPeq.png">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Incluye Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <title>El Faro - Deportes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/c928e1895b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Barra superior de avisos -->
+    <div class="alert alert-warning alert-dismissible fade show fixed-top text-center mb-0 section-SubTitulo-h4" role="alert">
+        ⚠️ Aviso importante: El sitio estará en mantenimiento mañana a las 10:00.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+
+    <header>
+        <!-- Menu de navegación -->
+        <nav class="navbar navbar-expand-lg " style="background-color: brown;" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- Logo y nombre del sitio -->
+                <a class="navbar-brand mx-auto d-flex align-items-center" href="#">
+                    <img src="../assets/img/logo.png" alt="Logo El Faro" width="70" height="70" class="me-2">
+                    <h4 class="titulo-nav-footer"><span>El Faro</span></h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">
+                                <i class="fa-solid fa-house-chimney"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/deportes.html">
+                                <i class="fa-solid fa-person-walking"></i> Deportes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/negocios.html">
+                                <i class="fa-solid fa-handshake"></i> Negocios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/actualidad.html">
+                                <i class="fa-solid fa-newspaper"></i> Actualidad
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/tiempo.html">
+                                <i class="fa-solid fa-cloud-sun"></i> Tiempo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/contacto.html">
+                                <i class="fa-solid fa-address-book"></i> Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/mensajes.html">
+                                <i class="fa-solid fa-message"></i> Mensajes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--section de reloj -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="reloj text-center section-SubTitulo-h4" id="reloj">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Deportes -->
+        <section class="pt-2">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center section-Titulo-h1">
+                        <i class="fa-solid fa-person-walking"></i> Deportes
+                    </h1>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="../views/deportes1.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="../assets/img/Deportes/Policella.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rechazó a Chile, es goleador de Argentina y le dio la clasificación a la final del Sudamericano Sub 17</h5>
+                                    <p class="card-text">
+                                        Juan Cruz Policella marcó un gol y dio una asistencia en el triunfo ante Ecuador, y es el máximo anotador de la
+                                        albiceleste.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="../views/deportes2.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="../assets/img/Deportes/penal.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 id="titulo1" class="card-title">"Me voy, te dejo relatando a vos": Piero Maza protagoniza escándalo en Copa Libertadores tras cobro de penal
+                                    </h5>
+                                    <p id="parr1" class="card-text">
+                                        El árbitro chileno causó polémica por su decisión en el duelo entre Palmeiras y Sporting Cristal.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="../views/deportes3.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="../assets/img/Deportes/LAROJAsub-17.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 id="titulo1" class="card-title">
+                                        Solo falta uno: Estos son todos los clasificados de Conmebol al Mundial Sub 17
+                                    </h5>
+                                    <p id="parr1" class="card-text">
+                                        El Sudamericano Sub 17 comienza a llegar a su fin y ya se conocen seis de los clasificados a la cita planetaria. El
+                                        último cupo saldrá de una "finalísima" entre Bolivia y Venezuela.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center section-Titulo-h1">Esto está pasando</h2>
+                        <div class="bg-danger text-white py-2">
+                            <div class="container overflow-hidden">
+                                <div class="ticker">
+                                    <p class="mb-0 section-noticias-p">
+                                        🔴 Última hora: Se anuncia nuevo acuerdo comercial... &nbsp;&nbsp;
+                                        ⚽ Deportes: El equipo local gana el clásico... &nbsp;&nbsp;
+                                        🌦️ Tiempo: Se esperan lluvias en Antofagasta... &nbsp;&nbsp;
+                                        💼 Negocios: Nueva inversión minera fortalece la economía local... &nbsp;&nbsp;
+                                        🎭 Cultura: Festival de teatro inicia este fin de semana... &nbsp;&nbsp;
+                                        🚦 Tránsito: Congestión en la avenida principal por obras viales... &nbsp;&nbsp;
+                                        🌍 Internacional: Cumbre global sobre cambio climático comienza hoy...
+                                        &nbsp;&nbsp;
+                                        📈 Economía: Bolsa de valores cierra con alza histórica...
+                                    </p>
+                                    <p class="mb-0 section-noticias-p">
+                                        🔴 Última hora: Se anuncia nuevo acuerdo comercial... &nbsp;&nbsp;
+                                        ⚽ Deportes: El equipo local gana el clásico... &nbsp;&nbsp;
+                                        🌦️ Tiempo: Se esperan lluvias en Antofagasta... &nbsp;&nbsp;
+                                        💼 Negocios: Nueva inversión minera fortalece la economía local... &nbsp;&nbsp;
+                                        🎭 Cultura: Festival de teatro inicia este fin de semana... &nbsp;&nbsp;
+                                        🚦 Tránsito: Congestión en la avenida principal por obras viales... &nbsp;&nbsp;
+                                        🌍 Internacional: Cumbre global sobre cambio climático comienza hoy...
+                                        &nbsp;&nbsp;
+                                        📈 Economía: Bolsa de valores cierra con alza histórica...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Sección de pie de página -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+
+                <!-- Logo y nombre -->
+                <div class="col-md-4 text-center text-md-start mb-3">
+
+                    <h5 class="titulo-nav-footer">El Faro</h5>
+                    <p class="foot-Subtitulo">Iluminando la noticia...</p>
+                </div>
+
+                <!-- Enlaces rápidos -->
+                <div class="col-md-4 text-center mb-3">
+                    <img src="../assets/img/logo.png" alt="Logo El Faro" width="100" class="mb-2">
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col-md-4 text-center text-md-end mb-3 foot-Subtitulo">
+                    <h6>Síguenos</h6>
+                    <a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank" class="text-white me-2"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="text-white me-2"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" class="text-white"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <hr class="border-light">
+            <div class="text-center foot-Subtitulo">
+                <small>&copy; 2026 El Faro. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<script src="../assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

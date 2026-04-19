@@ -3,345 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logoPeq.png">
+    
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" 
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Incluye Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     
     <title>El Faro</title>
-</head>
-<body class="container">
-    <!-- Encabezado con logo y título del sitio -->
-    <header>
-        <div class="reloj" id="reloj">
 
-        </div>
-        <div class="titulo">
-            <img src="assets/img/logo.jpg" alt="Logo El Faro" class="logo">
-            <h1>El Faro</h1>
-        </div>
-        <!-- Menu de navegación --> 
-        <nav>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-            <ul id="menu">
-                <li>
-                    <a href="index.html">Inicio</a>    
-                </li>
-                <li>
-                    <a href="#deportes">Deportes</a>    
-                </li>
-                <li>
-                    <a href="#negocios">Negocios</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="mensajes.html">Mensajes</a>
-                </li>
-            </ul>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/c928e1895b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Barra superior de avisos -->
+    <div class="alert alert-warning alert-dismissible fade show fixed-top text-center mb-0 section-SubTitulo-h4" role="alert">
+        ⚠️ Aviso importante: El sitio estará en mantenimiento mañana a las 10:00.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+
+    <header>
+        <!-- Menu de navegación -->
+        <nav class="navbar navbar-expand-lg " style="background-color: brown;" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- Logo y nombre del sitio -->
+                <a class="navbar-brand mx-auto d-flex align-items-center" href="#">
+                    <img src="assets/img/logo.png" alt="Logo El Faro" width="70" height="70" class="me-2">
+                    <h4 class="titulo-nav-footer"><span>El Faro</span></h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <i class="fa-solid fa-house-chimney"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/deportes.html">
+                                <i class="fa-solid fa-person-walking"></i> Deportes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/negocios.html">
+                                <i class="fa-solid fa-handshake"></i> Negocios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/actualidad.html">
+                                <i class="fa-solid fa-newspaper"></i> Actualidad
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/tiempo.html">
+                                <i class="fa-solid fa-cloud-sun"></i> Tiempo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/contacto.html">
+                                <i class="fa-solid fa-address-book"></i> Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/mensajes.html">
+                                <i class="fa-solid fa-message"></i> Mensajes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+    
     <main>
-        <!-- Contador total -->
-        <div class="contador-total">
-            <h2>Total de artículos en el sitio: <span id="count-total">0</span></h2>
-        </div>
-
-        <!-- Sección principal con noticias generales y multimedia -->
-        <section id="noticiasGenerales">
-            <!-- Título de la sección de noticias generales -->
-            <h1>Noticias Generales (<span id="count-generales">0</span>)</h1>
-            <!-- Cada noticia se presenta como un artículo con título y párrafo descriptivo -->
-            <div id="grid-generales" name="grid-generales" class="grid-noticias">
-                <article class="noticia">
-                    <h2>Gobernadores acuerdan fórmula con Ejecutivo para subsidiar al transporte público en regiones - Social
-                    </h2>
-                    <p>
-                        El gobernador de Los Lagos y presidente de la Asociación de Gobernadores Regionales de Chile (Agorechi),
-                        Alejandro Santana, informó que se acordó que el Ministerio de Transportes y Telecomunicaciones se haga
-                        cargo
-                        de la administración y financiamiento del subsidio del transporte público en regiones.
-                    </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>Dólar sube y supera los $920 impulsado por creciente incertidumbre en Medio Oriente - Economía</h2>
-                    <p>
-                        El dólar inicia la jornada de este jueves con un alza de $5,7 en el mercado cambiario local, en un
-                        escenario
-                        marcado por el fortalecimiento global del billete verde y un entorno internacional aún dominado por la
-                        incertidumbre geopolítica por la guerra en Medio Oriente.
-                    </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>Primer paso de un juicio histórico: Maduro comparece ante tribunal de Nueva York 82 días después de su
-                        arresto - Internacional</h2>
-                    <p>
-                        El depuesto líder venezolano Nicolás Maduro y su esposa, Cilia Flores, regresan este jueves a la Corte
-                        del
-                        Distrito Sur de Nueva York para su segunda audiencia tras su captura en enero, un proceso marcado por la
-                        denuncia de la defensa de un "bloqueo ilegal" de sus fondos para pagar abogados.
-                    </p>
-                </article>
-            </div>
-            <button id="btnNoticiasGenerales" type="button" class="btn-noticias">+</button>
-            <!--  Sección de multimedia con video y audio -->
-            <div id="multimedia">
-                <!-- Título de la sección de multimedia -->
-                <h1>Multimedia</h1>
-                <div class="contenedor">
-                    <div id="video">
-                        <iframe width="600" height="350" src="https://www.youtube.com/embed/tEwLE3WmraA"
-                            title="Video de noticia" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div id="audio">
-                        <audio controls controls autoplay>
-                            <source src="assets/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
-                        </audio>
-        
+        <!--section de reloj -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="reloj text-center section-SubTitulo-h4" id="reloj">
+                        
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Sección de deportes con formato de cuadrícula para noticias deportivas -->
-        <section id="deportes">
-            <!-- Título de la sección de deportes -->
-            <h1>Seccion Deportes (<span id="count-deportes">0</span>)</h1>
-            <div id="grid-deportes" class="grid-noticias">
-                <article class="noticia">
-                    <h2>
-                        Everton denuncia a Universidad Católica
-                        y arriesga millonaria sanción - Futbol
-                    </h2>
-                    <p>
-                        Los "ruleteros" presentaron antecedentes ante el
-                        Tribunal de Disciplina respecto de su visita al Claro Arena.
-                        Han pasado 12 días desde el sufrido empate (2-2)
-                        que rescató Universidad Católica ante
-                        Everton en el Claro Arena por la fecha 7 del
-                        Campeonato Nacional y el duelo continúa dando de
-                        qué hablar, aunque no por motivos futbolísticos. Y
-                        es que ahora los clubes se enfrentan en los
-                        escritorios del Tribunal de Disciplina
-                        Esta determinación causó molestia en
-                        Everton, que decidió denunciar a los cruzados amparados en
-                        el artículo 64 de las Bases del Campeonato , el
-                        cual establece un mínimo de aforo para el club
-                        visitante en partidos calificados en categoría B, C o D.
-                    </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>
-                        El COI prohíbe a las mujeres transgénero
-                        competir en categorías femeninas - Olimpico
-                        <p>
-                            Mediante un comunicado, establecieron que la
-                            elegibilidad "está limitada a mujeres biológicas, lo
-                            cual se determina sobre la base de una prueba
-                            única del gen SRY“
-                            El Comité Olímpico Internacional (COI) anunció
-                            una nueva política sobre la protección de la
-                            categoría femenina en el deporte olímpico que se
-                            aplicará a partir de los Juegos Olímpicos de Los
-                            Ángeles 2028 y que no tendrá carácter retroactivo,
-                            y que prohibirá a las mujeres transgénero
-                            competir en categorías femeninas.
-                            Según indicó el COI en un comunicado, ahora la
-                            elegibilidad para cualquier evento de categoría
-                            femenina en los Juegos Olímpicos o cualquier otro
-                            evento que auspicie, incluidos los deportes
-                            individuales y de equipo, equipo,"está limitada a mujeres
-                            biológicas, lo cual se determina sobre la base
-                            de una prueba única del gen SRY" y detectar su
-                            "ausencia o
-                            "Esta política, fundamentada en pruebas y con el
-                            respaldo de expertos, y aplicable a partir de los
-                            Juegos Olímpicos de Los Ángeles 2028, protege la
-                            equidad, la seguridad y la integridad en la categoría
-                            femenina. No tiene carácter retroactivo y no se
-                            aplica a ningún programa deportivo de base o
-                            recreativo", apuntó el comité.
-                        </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>
-                        Bolivia vs Surinam: Hora y canal CONFIRMADO para ver el repechaje del
-                        Mundial 2026 - Futbol
-                    </h2>
-                    <p>
-                        La selección altiplánica buscará alcanzar uno de
-                        los últimos cupos para disputar el torneo. Revisa
-                        aquí todos los detalles de la programación.
-                        Argentina, Brasil, Colombia, Ecuador, Paraguay y
-                        Uruguay consiguieron el pasaje rumbo a la
-                        próxima Copa Mundial de la FIFA a través de las
-                        eliminatorias de CONMEBOL. Bolivia , por su
-                        parte, competirá en el torneo clasificatorio que se
-                        disputará desde el 26 hasta el 31 de marzo tras
-                        obtener la séptima posición.
-                        De los playoffs, además, participarán dos
-                        selecciones de la Confederación de Norteamérica,
-                        Centroamérica y el Caribe de Fútbol (CONCACAF)
-                        Jamaica y Surinam uno de la Confederación
-                        Asiática de Fútbol (AFC) Irak y otro de la
-                        Confederación de Fútbol de Oceanía (OFC)
-                        Nueva Caledonia.
-                        Las cuatro selecciones con menor ranking en
-                        las eliminatorias del Mundial (Bolivia, Surinam,
-                        Nueva Caledonia y Jamaica) se enfrentarán en
-                        una instancia de semifinales que se definieron
-                        por sorteo. Por su parte, los equipos mejor
-                        posicionados en la tabla (República Democrática
-                        del Congo e Irak) son cabeza de serie y accedieron
-                        directamente a la final.
-                    </p>
-                </article>
+
+        <!-- Sección de carrusel -->
+        <section>
+            <div class="container border-bottom border-black border-2 d-none d-sm-block  d-xs-block">
+                <div class="row">
+                    <div class="col">
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="views/tiempo1.html">
+                                        <img src="assets/img/Tiempo/LLUVIA-EL-NINO.webp" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>Viene El Niño a Chile.</h3>
+                                            <p>"Probablemente tengamos mucha lluvia en junio, julio y agosto".</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="views/actualidad4.html">
+                                        <img src="assets/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>Irán anuncia reapertura del estrecho de Ormuz en medio de frágil tregua.</h3>
+                                            <p>La medida permite el paso de buques comerciales bajo control iraní y provoca una fuerte caída en el precio del
+                                                petróleo.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">|
+                                    <a href="views/tiempo3.html">
+                                        <img src="assets/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>Posibles inundaciones hasta salidas de cauces de ríos: ¿Fenómeno de El Niño vendrá con "Godzilla" a Chile?</h3>
+                                            <p>
+                                                Experto advirtió que “Godzilla” no está en la naturaleza de El Niño, sino en la planificación urbana que tienen
+                                                algunas
+                                                ciudades y territorios.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button id="btnNoticiasDeportes" type="button" class="btn-noticias">+</button>
         </section>
-        <section id="negocios">
-            <!-- Título de la sección de negocios -->
-            <h1>Seccion Negocios (<span id="count-negocios">0</span>)
-</h1>
         
-            <div id="grid-negocios" class="grid-noticias">
-                <article class="noticia">
-                    <h2>
-                        Feria libre y comercio de barrio: Lo
-                        Valledor aclara impacto en precio de
-                        frutas y verduras - Economía
-                    </h2>
-                    <p>
-                        Gonzalo Bravo, Administrador General del recinto,
-                        explicó que para el comercio pequeño, "puede que
-                        ese sobreprecio que tenga por el alza en los fletes
-                        o en el transporte personal se traspase a ese
-                        producto“.
-                        Luego del anuncio del
-                        Gobierno del incremento en
-                        el precio de las bencinas, creció la preocupación
-                        ante un eventual alza en la canasta básica . Ante
-                        esto, el Mercado Mayorista Lo Valledor llamó a la
-                        calma, explicando la dinámica de costos que rige al
-                        principal centro de abastecimiento del país.
-                        No obstante, Bravo reconoció que el escenario es
-                        distinto para quienes operan con estructuras
-                        logísticas más reducidas. “ Si bien podría verse
-                        más afectado los pequeños que traen menor
-                        volumen o no tienen el volumen para llegar al
-                        mercado , puede que ese sobreprecio que tenga
-                        por el alza en los fletes o en el transporte personal
-                        se traspase a ese producto”, señaló.
-                    </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>
-                        Reconocida empresa chilena rematará
-                        más de 500 mil alimentos en conserva - Economía
-                    </h2>
-                    <p>
-                        Se trata de la histórica empresa chilena, Centauro,
-                        que fue declarada en quiebra en febrero del 2026.
-                        Remates del Río
-                        anunció que más de 500.000
-                        alimentos en conserva serán liquidados.
-                        Se trata de la histórica empresa chilena de
-                        conservas, Centauro S.A, la cual ya había sido
-                        declarada en quiebra en febrero de este año.
-                        En concreto, la firma, que cuenta con 108 años de
-                        vida y tradición, adeuda en torno a $2.300 millones
-                        a sus acreedores, dejando en jaque el camino para
-                        sus 110 trabajadores.
-                        En tanto, la empresa de
-                        remates online anunció
-                        que la liquidación de los alimentos conserveros se
-                        realizará el próximo 27 de marzo a las 11:00 horas
-                        a través del sitio web
-                        <a href="https://www.rematesdelrio.cl" target="_blank">www.rematesdelrio.cl</a>
-                        Para participar, hay que inscribirse en un link
-                        habilitado en la página para dicho remate, ya que la
-                        modalidad será 100% online.
-                    </p>
-                </article>
-        
-                <article class="noticia">
-                    <h2>
-                        Gastos comunes al alza en la RM: las
-                        comunas donde más subieron y en
-                        cuáles se paga más - Economía
-                    </h2>
-                    <p>
-                        Un estudio de
-                        Assetplan analizó 10 comunas de la
-                        región Metropolitana, revelando que entre una
-                        comuna y otra puede haber una diferencia superior
-                        a los $160.000.
-                        Un estudio de
-                        Assetplan reveló cuáles fueron las
-                        comunas que más aumentaron sus valores
-                        respecto al pago de gastos comunes , siendo
-                        Ñuñoa la zona al tope de la lista.
-                        De acuerdo a lo señalado por el sondeo, entre
-                        enero del 2025 y enero del 2026 los gastos
-                        comunes aumentaron su valor en 17% como
-                        promedio, considerando departamentos de un
-                        dormitorio y un baño.
-                        El estudio consideró información de 81 edificios
-                        ubicados en 10 comunas de la región
-                        Metropolitana, analizando principalmente
-                        tipologías de departamentos de 1 dormitorio y 2
-                        dormitorios, con el objetivo de observar la
-                        evolución del costo de operación de los edificios
-                        durante el último año.
-                    </p>
-                </article>
+        <!-- Sección principal con noticias generales y multimedia solo en dispositivos móviles -->
+        <section class="noticiasGenerales pt-2">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center section-Titulo-h1">Ultimas Noticias</h1>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="views/tiempo1.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="assets/img/Tiempo/LLUVIA-EL-NINO.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Viene El Niño a Chile.</h5>
+                                    <p class="card-text">
+                                        "Probablemente tengamos mucha lluvia en junio, julio y agosto".
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="views/actualidad4.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="assets/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 id="titulo1" class="card-title">Irán anuncia reapertura del estrecho de Ormuz en medio de frágil tregua.
+                                    </h5>
+                                    <p id="parr1" class="card-text">
+                                        La medida permite el paso de buques comerciales bajo control iraní y provoca una fuerte caída en el precio
+                                        del
+                                        petróleo.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <a href="views/tiempo3.html">
+                            <div class="card mb-5 animate__animated animate__fadeInUp">
+                                <img src="assets/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 id="titulo1" class="card-title">Posibles inundaciones hasta salidas de cauces de ríos: ¿Fenómeno de El Niño vendrá con "Godzilla" a Chile?
+                                    </h5>
+                                    <p id="parr1" class="card-text">
+                                        Experto advirtió que “Godzilla” no está en la naturaleza de El Niño, sino en la planificación urbana que tienen
+                                        algunas
+                                        ciudades y territorios.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <button id="btnNoticiasNegocios" type="button" class="btn-noticias">+</button>
+        </section>
+
+        <!-- Sección de multimedia -->
+        <section class="multimedia">
+            <div class="container pt-3">
+                <div class="row">
+                    <h1 class="text-center section-Titulo-h1">Multimedia</h1>
+                    <div class="col-xl-6 col-md-12 col-sm-12">
+                        <div class="container my-4">
+                            <h4 class="text-center section-SubTitulo-h4">Aprede a programar</h4>
+                            <div class="ratio ratio-16x9">
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/tEwLE3WmraA" title="Video de noticia"
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12 col-sm-12">
+                        <div class="container my-4">
+                            <h4 class="text-center section-SubTitulo-h4">Noticias en Vivo</h4>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/IvJY7dPoLRQ" title="Noticias en vivo" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12">
+                        <h4 class="text-center section-SubTitulo-h4">Intro de Noticias</h4>
+                        <audio controls controls autoplay class="w-100">
+                            <source src="assets/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center section-Titulo-h1">Esto está pasando</h1>
+                        <div class="bg-danger text-white py-2">
+                            <div class="container overflow-hidden">
+                                <div class="ticker">
+                                    <p class="mb-0 section-noticias-p">
+                                        🔴 Última hora: Se anuncia nuevo acuerdo comercial... &nbsp;&nbsp;
+                                        ⚽ Deportes: El equipo local gana el clásico... &nbsp;&nbsp;
+                                        🌦️ Tiempo: Se esperan lluvias en Antofagasta... &nbsp;&nbsp;
+                                        💼 Negocios: Nueva inversión minera fortalece la economía local... &nbsp;&nbsp;
+                                        🎭 Cultura: Festival de teatro inicia este fin de semana... &nbsp;&nbsp;
+                                        🚦 Tránsito: Congestión en la avenida principal por obras viales... &nbsp;&nbsp;
+                                        🌍 Internacional: Cumbre global sobre cambio climático comienza hoy... &nbsp;&nbsp;
+                                        📈 Economía: Bolsa de valores cierra con alza histórica...                                     
+                                    </p>
+                                    <p class="mb-0 section-noticias-p">
+                                        🔴 Última hora: Se anuncia nuevo acuerdo comercial... &nbsp;&nbsp;
+                                        ⚽ Deportes: El equipo local gana el clásico... &nbsp;&nbsp;
+                                        🌦️ Tiempo: Se esperan lluvias en Antofagasta... &nbsp;&nbsp;
+                                        💼 Negocios: Nueva inversión minera fortalece la economía local... &nbsp;&nbsp;
+                                        🎭 Cultura: Festival de teatro inicia este fin de semana... &nbsp;&nbsp;
+                                        🚦 Tránsito: Congestión en la avenida principal por obras viales... &nbsp;&nbsp;
+                                        🌍 Internacional: Cumbre global sobre cambio climático comienza hoy... &nbsp;&nbsp;
+                                        📈 Economía: Bolsa de valores cierra con alza histórica...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
-  
     <!-- Sección de pie de página -->
-    <footer>
-        <div class="footer-data">
-            <h3>Email: elfaro@info.com</h3>
-            <h3>Teléfono: 9561436852</h3>
-            <p><strong>EL Faro, iluminando la noticia....</strong></p>
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+    
+                <!-- Logo y nombre -->
+                <div class="col-md-4 text-center text-md-start mb-3">
+                    
+                    <h5 class="titulo-nav-footer">El Faro</h5>
+                    <p class="foot-Subtitulo">Iluminando la noticia...</p>
+                </div>
+    
+                <!-- Enlaces rápidos -->
+                <div class="col-md-4 text-center mb-3">
+                    <img src="assets/img/logo.png" alt="Logo El Faro" width="100" class="mb-2">
+                </div>
+    
+                <!-- Redes sociales -->
+                <div class="col-md-4 text-center text-md-end mb-3 foot-Subtitulo">
+                    <h6>Síguenos</h6>
+                    <a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+    
+            </div>
+            <hr class="border-light">
+            <div class="text-center foot-Subtitulo">
+                <small>&copy; 2026 El Faro. Todos los derechos reservados.</small>
+            </div>
         </div>
     </footer>
-
-    <!-- Modal Noticias -->
-    <div id="modalNoticias" class="modal fade">
-        <div class="modal-contenido">
-            <span class="cerrar">&times;</span>
-            <h2 id="tituloM"></h2>
-            <form id="formArticulo" enctype="multipart/form-data">
-                <label for="titulo">Título del artículo</label>
-                <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título">
-                <label for="categoria" class="form-label">Categoria</label>
-                <select id="categoria" name="categoria" value="">
-                    
-                </select>
-                <label for="descripcion">Descripción</label>
-                <textarea id="descripcion" name="descripcion" placeholder="Ingrese la descripción" rows="4"></textarea>
-            
-                <button type="submit" class="btn-guardar">Guardar</button>
-            </form>
-        </div>
-    </div>
-
 </body>
+
+
 <script src="assets/js/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </html>

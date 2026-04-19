@@ -1,29 +1,17 @@
-* {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: "Cabin", sans-serif;
-    background-color: #f5f5f5;
+body {
+    min-height: 100vh; /* ocupa toda la altura de la ventana */
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* asegura que el body ocupe toda la altura */
+    flex-direction: column; /* organiza en columna */
 }
 
-main{
-    flex: 1; /* empuja el footer hacia abajo */
+main {
+    flex: 1; /* el contenido ocupa el espacio disponible */
 }
 
 header{
-    background-image: url("../img/fondo-header.png");
-    background-size: cover;
-    background-position: center;
     text-align: center;
     display: flex;
-    flex-direction: column; /* mantiene título y menú en bloque */
+    flex-direction: column;
     text-align: center;
 }
 
@@ -34,399 +22,106 @@ header{
     margin: 5px 0 5px 20px; /* espacio respecto al borde */
 }
 
-.titulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/*carrusel*/
+.carousel-item img {
+    height: 400px; /* Ajusta el alto */
+    object-fit: cover; /* Recorta la imagen manteniendo proporción */
 }
 
-.titulo h1{
-    margin: 0;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50px;
+/*fuentes*/
+.titulo-nav-footer {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 37pt;
 }
 
-.logo{
-    width: 100px;
-    height: 100px;
+.navbar-nav li a {
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
 }
 
-nav {
-    margin: 0;
-    background: #ff0000;
-    font-weight: 500;
-    font-size: 20px;
+.foot-Subtitulo{
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 10px;
+.section-noticias-p{
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-weight: normal;
-    padding: 10px 15px;
-    display: block;
+.section-Titulo-h1 {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 40pt;
 }
 
-nav ul li a:hover {
-    color: #ffff00;
-    background: #fa4b01;
-    font-weight: bold; /* aplica negrita */
-    text-decoration: none; /* quita subrayado */
+.section-SubTitulo-h4 {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 20pt;
 }
 
-/* Botón hamburguesa oculto en escritorio */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
+.card-body h5 {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 23pt;
 }
 
-section
-{
-    padding-top: 30px;
-    padding-left: 70px;
-    padding-right: 70px;
+.card-body p {
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
 }
 
-section h1{
-    margin-bottom:10px ;
-    font-size: 30px;
+.carousel-item h3{
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 28pt;
 }
 
-/*Tarjetas*/
-.grid-noticias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+.carousel-item p {
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
 }
 
-.noticia {
-    background: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/*noticias generales*/
+.noticiasGenerales {
+    display: none; /* Oculta por defecto */
 }
 
-.noticia h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.noticia p {
-    font-size: 16px;
-    line-height: 1.4;
-    color: #555;
-}
-
-.noticia:hover {
-    background: #000000; /* fondo negro */
-}
-
-.noticia:hover h2, .noticia:hover p {
-    color: #fff; /* títulos y párrafos se vuelvan blancos */
-}
-
-/*multimedia*/
-#multimedia{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#multimedia h1{
-    text-align: center;
-}
-
-.contenedor {
-    display: flex; /* Activa flexbox */
-    justify-content: space-around; /* Espacio entre video y audio */
-    align-items: flex-start; 
-    gap: 20px; /* Espacio entre los bloques */
-}
-
-#video, #audio {
-    flex: 1; /* Que ambos ocupen espacio proporcional */
-}
-
-#video iframe{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
-}
-
-#audio audio{
-    width: 100%;
-}
-
-footer{
-    margin-top: 30px;
-    padding: 30px;
-    background: #c9d2d0;
-}
-
-.footer-data{
-    color: #31231e;
-    text-align: center;
-}
-
-.footer-data p strong{
-    font-size: 20px;
-}
-
-/*crear boton*/
-#btnNoticiasGenerales, #btnNoticiasDeportes, #btnNoticiasNegocios {
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    border-radius: 20%;
-    width: 40px;
-    height: 40px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-#btnNoticiasGenerales:hover, #btnNoticiasDeportes:hover, #btnNoticiasNegocios:hover {
-    background-color: green;
-}
-
-/*MODAL Noticias*/
-.modal{
-    display: none; /* oculto por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5); /* fondo semitransparente */
-    opacity: 0;
-    transition: opacity 0.4s ease; /* transición suave */
-    position:fixed;
-}
-
-/* Caja del contenido */
-.modal-contenido {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%; /* ancho del modal */
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(-30px); /* empieza un poco arriba */
-    transition: all 0.4s ease; /* animación suave */
-}
-
-/* Animación estilo Bootstrap */
-.fade.show .modal-contenido {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.modal.show {
-    display: block;
-    opacity: 1;
-}
-
-.modal.show .modal-contenido {
-    transform: translateY(0); /* baja suavemente */
-    opacity: 1;
-}
-
-/* Botón cerrar */
-.cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.cerrar:hover {
-    color: #ff0000;
-}
-
-/* Labels e inputs */
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: 500;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form select:focus {
-    border-color: #3300ff;
-    outline: none;
-}
-
-/* Botón guardar */
-.btn-guardar {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-guardar:hover {
-    background-color: #fa4b01;
-}
-
-/* Accordion base */
-.accordion {
-    width: 100%;
-    max-width: none; /* elimina cualquier límite de ancho */
-    margin: 0; /* quita márgenes laterales */
-    border-radius: 0; /* opcional: bordes rectos para ocupar todo */
+/*contenido adicional*/
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
     overflow: hidden;
 }
 
-.accordion-item {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+.ticker p {
+    display: inline-block;
+    padding-right: 2rem;
+    animation: ticker-move 25s linear infinite;
 }
 
-/* Header con flecha */
-.accordion-header {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    background-color: #5c35f4;
-    border-color: #5c35f4;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    position: relative;
-    color: #fff;
-    border-radius: 8px;
+@keyframes ticker-move {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-/* Flecha con pseudo-elemento */
-.accordion-header::after {
-    content: "▼"; /* flecha hacia abajo */
-    position: absolute;
-    right: 20px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Estado abierto: flecha rota */
-.accordion-item.active .accordion-header::after {
-    transform: rotate(180deg); /* flecha hacia arriba */
-}
-
-/*  Hover */
-.accordion-header:hover {
-    background-color: #eaeaea;
-}
-
-/* Cuerpo del accordion */
-.accordion-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    background: #fff;
-    padding: 0 15px;
-}
-
-/* Estado abierto */
-.accordion-item.active .accordion-body {
-    max-height: 600px;
-    padding: 15px;
-}
-
-/*Table*/
-.mensajes {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.mensajes h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Contenedor para scroll en móviles */
-.tabla-contenedor {
-    overflow-x: auto;
-}
-
-/* Tabla base */
-.tabla-mensajes {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 15px;
-}
-
-.tabla-mensajes th, .tabla-mensajes td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-.tabla-mensajes th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-}
-
-/* Alternar colores de filas */
-.tabla-mensajes tr:nth-child(even) {
-    background-color: #fafafa;
-}
-
-/* Botón Ver mensaje */
-.btn-ver {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-ver:hover {
-    background-color: #fa4b01;
+/*animacion card*/
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /*contador total*/
@@ -440,118 +135,59 @@ form select:focus {
     color: #333; /* color del texto */
 }
 
-
 @media (max-width: 600px) {
 
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    main {
-        padding: 0; /* elimina el padding lateral */
-        width: 100%; /* ocupa todo el ancho de la ventana */
-        box-sizing: border-box; /* asegura que el padding no reste ancho */
+    /*Ver Tarjetas Noticias Genenrales*/
+    .noticiasGenerales {
+        display: block;
     }
 
-    section {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px; /* opcional */
-    }
-
-    .tabla-mensajes th, .tabla-mensajes td {
-        padding: 8px;
-        font-size: 13px;
-    }
-
-    .btn-ver {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-
-    .accordion {
-        width: 100%; /* ocupa todo el ancho de la ventana */
-        margin: 0; /* sin márgenes */
-        border-radius: 0; /* opcional: bordes rectos */
-    }
+        /*fuentes*/
+        .titulo-nav-footer {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-size: 30pt;
+        }
     
-    .accordion-header {
-        font-size: 18px;
-        padding: 14px;
-    }
+        .navbar-nav li a {
+            font-family: "Cabin", sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+        }
     
-    .accordion-header::after {
-        right: 10px;
-        font-size: 14px;
-    }
-
-    .accordion-item {
-        width: 100%; 
-    }
+        .foot-Subtitulo {
+            font-family: "Cabin", sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+        }
     
-    .accordion-body {
-        padding: 0px;
-    }
+        .section-noticias-p {
+            font-family: "Cabin", sans-serif;
+            font-weight: 400;
+            font-size: 16pt;
+        }
     
-    form input, form textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
+        .section-Titulo-h1 {
+            font-family: "Cabin", sans-serif;
+            font-weight: 700;
+            font-size: 20pt;
+        }
     
-    .btn-guardar {
-        font-size: 14px;
-        padding: 12px;
-    }
+        .section-SubTitulo-h4 {
+            font-family: "Cabin", sans-serif;
+            font-weight: 700;
+            font-size: 16pt;
+        }
+    
+        .card-body h5 {
+            font-family: "Cabin", sans-serif;
+            font-weight: 700;
+            font-size: 18pt;
+        }
+    
+        .card-body p {
+            font-family: "Cabin", sans-serif;
+            font-weight: 400;
+            font-size: 14pt;
+        }
 }
-
-/* Responsivo: en pantallas pequeñas */
-@media (max-width: 800px) {
-
-    main {
-        padding: 0; /* elimina el padding lateral en móvil */
-    }
-    /* el menú se vuelve vertical y se oculta por defecto */
-    nav ul {
-        flex-direction: column;
-        display: none; /* oculto por defecto */
-        gap: 0;
-    }
-
-    nav ul li {
-        text-align: center;
-        border-top: 1px solid #fff;
-    }
-
-    .menu-toggle {
-        display: block; /* mostrar hamburguesa */
-        text-align: right;
-    }
-
-    nav ul.show {
-        display: flex; /* mostrar menú cuando se active */
-    }
-
-   .grid-noticias {
-       grid-template-columns: 1fr; /* 1 columna en móviles */
-   }
-
-   /*multimedia apilado en móviles*/
-   .contenedor {
-       flex-direction: column; /* apila video y audio */
-       align-items: center;
-   }
-
-   #video, #audio {
-       width: 100%; /* cada bloque ocupa todo el ancho */
-   }
-
-   #video iframe {
-       max-width: 100%; /* asegura que no se desborde */
-   }
-
-   #audio audio {
-       max-width: 100%;
-   }
-}
-

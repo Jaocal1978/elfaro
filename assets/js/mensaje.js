@@ -1,92 +1,36 @@
 document.addEventListener('DOMContentLoaded', () =>
 {
-    // Lógica para abrir/cerrar el accordion
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
-
-    accordionHeaders.forEach(header => {
-        header.addEventListener("click", () => 
-        {
-            const item = header.parentElement;
-            item.classList.toggle("active");
-        });
-    });
-
     // Recuperar mensajes previos de localStorage
     let arrMensaje = JSON.parse(localStorage.getItem('mensajes')) || [];
-    const contenedor = document.querySelector('#tableContenedor');
+    const cards = document.querySelector('#cards');
+    const colores = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark"];
 
     if(arrMensaje.length === 0)
     {
-        contenedor.innerHTML = `
+        cards.innerHTML = `
             <p>No hay mensajes para mostrar.</p>
         `;
     }
     else
     {
-        contenedor.innerHTML = `
-            <table class="tabla-mensajes">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Mensaje</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody id="tbMensajes">
-        
-                </tbody>
-            </table>
-        `;
-
-        const tbody = document.querySelector('#tbMensajes');
         arrMensaje.forEach((msg, i) => 
         {
-            tbody.innerHTML += `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td>${msg.nombre}</td>
-                    <td>${msg.mensaje}</td>
-                    <td><button class="btn-ver" data-index="${i}">Ver</button></td>
-                </tr>
+            const coloresRandom = colores[Math.floor(Math.random() * colores.length)];
+
+            cards.innerHTML += `
+                <div class="col-sm-12 col-md-6 col-xl-4">
+                    <div class="card mb-5 animate__animated animate__fadeInUp ${coloresRandom} text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">${msg.nombre}</h5>
+                            <h6 class="card-subtitle mb-2 text-White">${msg.email}</h6>
+                            <p class="card-text">
+                                ${msg.mensaje}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             `;
         });
+
     }
-    const modal = document.querySelector('#modalMensaje');
-    const cerrar = document.querySelector('.cerrar');
-
-    //Lógica para mostrar modal al hacer click en "Ver"
-    document.addEventListener('click', (e) =>
-    {
-        if(e.target.classList.contains('btn-ver'))
-        {
-            const index = e.target.getAttribute('data-index');
-            const msg = arrMensaje[index];
-
-            console.log(msg);
-
-            modal.style.display = 'block';
-            setTimeout(() => modal.classList.add("show"), 10); // activa animación
-
-            document.querySelector('#Nombre').textContent = msg.nombre;
-            document.querySelector('#Mensaje').textContent = msg.mensaje;
-        }
-    });
-
-    //cerrar modal
-    btnCerrar.addEventListener('click', () => 
-    {
-        modal.classList.remove("show");
-        setTimeout(() => modal.style.display = "none", 400); // espera animación
-    });
-
-    //Cerrar modal al hacer clic fuera del contenido
-    window.addEventListener('click', (event) => 
-    {
-        if (event.target === modal)
-        {     
-            modal.classList.remove("show");
-            setTimeout(() => modal.style.display = "none", 400); // espera animación
-        }
-    });
 });
