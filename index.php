@@ -1,98 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="assets/img/logoPeq.png">
-    
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
+<?php 
+   
+    require_once("helpers/helpers.php");
+    include 'views/Template/header.php';
 
-    <!-- Incluye Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+?>
 
-    
-    <title>El Faro</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/c928e1895b.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Barra superior de avisos -->
-    <div class="alert alert-warning alert-dismissible fade show fixed-top text-center mb-0 section-SubTitulo-h4" role="alert">
-        ⚠️ Aviso importante: El sitio estará en mantenimiento mañana a las 10:00.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-    </div>
-
-    <header>
-        <!-- Menu de navegación -->
-        <nav class="navbar navbar-expand-lg " style="background-color: brown;" data-bs-theme="dark">
-            <div class="container-fluid">
-                <!-- Logo y nombre del sitio -->
-                <a class="navbar-brand mx-auto d-flex align-items-center" href="#">
-                    <img src="assets/img/logo.png" alt="Logo El Faro" width="70" height="70" class="me-2">
-                    <h4 class="titulo-nav-footer"><span>El Faro</span></h4>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">
-                                <i class="fa-solid fa-house-chimney"></i> Inicio
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/deportes.html">
-                                <i class="fa-solid fa-person-walking"></i> Deportes
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/negocios.html">
-                                <i class="fa-solid fa-handshake"></i> Negocios
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/actualidad.html">
-                                <i class="fa-solid fa-newspaper"></i> Actualidad
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/tiempo.html">
-                                <i class="fa-solid fa-cloud-sun"></i> Tiempo
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/contacto.html">
-                                <i class="fa-solid fa-address-book"></i> Contacto
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/mensajes.html">
-                                <i class="fa-solid fa-message"></i> Mensajes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <main>
+<main>
         <!--section de reloj -->
         <section>
             <div class="container">
@@ -114,8 +28,8 @@
                         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <a href="views/tiempo1.html">
-                                        <img src="assets/img/Tiempo/LLUVIA-EL-NINO.webp" class="d-block w-100" alt="...">
+                                    <a href="<?php echo base_url();?>/views/tiempo1.php">
+                                        <img src="<?php echo media(); ?>/img/Tiempo/LLUVIA-EL-NINO.webp" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>Viene El Niño a Chile.</h3>
                                             <p>"Probablemente tengamos mucha lluvia en junio, julio y agosto".</p>
@@ -123,8 +37,8 @@
                                     </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <a href="views/actualidad4.html">
-                                        <img src="assets/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="d-block w-100" alt="...">
+                                    <a href="<?php echo base_url();?>/views/actualidad4.php">
+                                        <img src="<?php echo media(); ?>/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>Irán anuncia reapertura del estrecho de Ormuz en medio de frágil tregua.</h3>
                                             <p>La medida permite el paso de buques comerciales bajo control iraní y provoca una fuerte caída en el precio del
@@ -133,8 +47,8 @@
                                     </a>
                                 </div>
                                 <div class="carousel-item">|
-                                    <a href="views/tiempo3.html">
-                                        <img src="assets/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="d-block w-100" alt="...">
+                                    <a href="<?php echo base_url();?>/views/tiempo3.php">
+                                        <img src="<?php echo media(); ?>/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>Posibles inundaciones hasta salidas de cauces de ríos: ¿Fenómeno de El Niño vendrá con "Godzilla" a Chile?</h3>
                                             <p>
@@ -168,9 +82,9 @@
                 <div class="row">
                     <h1 class="text-center section-Titulo-h1">Ultimas Noticias</h1>
                     <div class="col-sm-12 col-md-6 col-xl-4">
-                        <a href="views/tiempo1.html">
+                        <a href="<?php echo base_url(); ?>/views/tiempo1.php">
                             <div class="card mb-5 animate__animated animate__fadeInUp">
-                                <img src="assets/img/Tiempo/LLUVIA-EL-NINO.webp" class="card-img-top" alt="...">
+                                <img src="<?php echo media(); ?>/img/Tiempo/LLUVIA-EL-NINO.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Viene El Niño a Chile.</h5>
                                     <p class="card-text">
@@ -181,9 +95,9 @@
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-xl-4">
-                        <a href="views/actualidad4.html">
+                        <a href="<?php echo base_url(); ?>/views/actualidad4.php">
                             <div class="card mb-5 animate__animated animate__fadeInUp">
-                                <img src="assets/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="card-img-top" alt="...">
+                                <img src="<?php echo media(); ?>/img/actualidad/Iran_anuncia_reapertura_del_estrecho_de_Ormuz.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 id="titulo1" class="card-title">Irán anuncia reapertura del estrecho de Ormuz en medio de frágil tregua.
                                     </h5>
@@ -197,9 +111,9 @@
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-xl-4">
-                        <a href="views/tiempo3.html">
+                        <a href="<?php echo base_url(); ?>/views/tiempo3.php">
                             <div class="card mb-5 animate__animated animate__fadeInUp">
-                                <img src="assets/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="card-img-top"
+                                <img src="<?php echo media(); ?>/img/Tiempo/Hasta_150_mm_Sistema_frontal_dejara_intensas.webp" class="card-img-top"
                                     alt="...">
                                 <div class="card-body">
                                     <h5 id="titulo1" class="card-title">Posibles inundaciones hasta salidas de cauces de ríos: ¿Fenómeno de El Niño vendrá con "Godzilla" a Chile?
@@ -237,7 +151,7 @@
                         <div class="container my-4">
                             <h4 class="text-center section-SubTitulo-h4">Noticias en Vivo</h4>
                             <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/IvJY7dPoLRQ" title="Noticias en vivo" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/2wZ47eFQ_J8" title="Noticias en vivo" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -246,7 +160,7 @@
                     <div class="col-xl-12 col-md-12 col-sm-12">
                         <h4 class="text-center section-SubTitulo-h4">Intro de Noticias</h4>
                         <audio controls controls autoplay class="w-100">
-                            <source src="assets/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
+                            <source src="<?php echo media(); ?>/audio/artmylife-daily-news-theme-477171.mp3"></iframe>" type="audio/mpeg">
                         </audio>
                     </div>
                 </div>
@@ -289,47 +203,9 @@
             </div>
         </section>
     </main>
-    <!-- Sección de pie de página -->
-    <footer class="bg-dark text-white mt-5">
-        <div class="container py-4">
-            <div class="row">
-    
-                <!-- Logo y nombre -->
-                <div class="col-md-4 text-center text-md-start mb-3">
-                    
-                    <h5 class="titulo-nav-footer">El Faro</h5>
-                    <p class="foot-Subtitulo">Iluminando la noticia...</p>
-                </div>
-    
-                <!-- Enlaces rápidos -->
-                <div class="col-md-4 text-center mb-3">
-                    <img src="assets/img/logo.png" alt="Logo El Faro" width="100" class="mb-2">
-                </div>
-    
-                <!-- Redes sociales -->
-                <div class="col-md-4 text-center text-md-end mb-3 foot-Subtitulo">
-                    <h6>Síguenos</h6>
-                    <a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/" target="_blank" class="text-white"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-    
-            </div>
-            <hr class="border-light">
-            <div class="text-center foot-Subtitulo">
-                <small>&copy; 2026 El Faro. Todos los derechos reservados.</small>
-            </div>
-        </div>
-    </footer>
-</body>
 
+    <script src="<?php echo media(); ?>/js/index.js"></script>
 
-<script src="assets/js/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<!-- Bootstrap JS Bundle (incluye Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-</html>
+<?php 
+    include 'views/Template/footer.php';
+?>

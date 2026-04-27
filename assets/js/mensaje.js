@@ -1,7 +1,16 @@
-document.addEventListener('DOMContentLoaded', () =>
+document.addEventListener('DOMContentLoaded', async () =>
 {
-    // Recuperar mensajes previos de localStorage
-    let arrMensaje = JSON.parse(localStorage.getItem('mensajes')) || [];
+    //Buscar todos los mensajes desde el backend
+    const res = await fetch('/El_Faro/controllers/Contacto.php',
+    {
+        method: 'GET',
+    });
+    const data = await res.json();
+
+    console.log(data.contactos);
+    const arrMensaje = data.contactos;
+
+    //Seleccionar el contenedor de las tarjetas y definir colores para las tarjetas
     const cards = document.querySelector('#cards');
     const colores = ["bg-primary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-dark"];
 
@@ -31,6 +40,5 @@ document.addEventListener('DOMContentLoaded', () =>
                 </div>
             `;
         });
-
     }
 });
